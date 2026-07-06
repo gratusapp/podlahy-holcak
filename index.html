@@ -296,8 +296,9 @@
         <p class="section-subtitle">Vyplňte formulář a my se vám ozveme s nabídkou na míru. Obvykle odpovídáme do 24 hodin.</p>
 
         <form action="https://formsubmit.co/podlahy.holcak@gmail.com" method="POST" class="inquiry-form" id="inquiryForm" onsubmit="handleSubmit(event)">
-<input type="hidden" name="_subject" value="Nová nezávazná poptávka z webu">
-<input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nová nezávazná poptávka z webu">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://gratusapp.github.io/podlahy-holcak/">
 
           <!-- Typ nemovitosti -->
           <label style="font-size: .85rem; font-weight: 500; margin-bottom: 12px; display: block;">Typ prostoru *</label>
@@ -490,17 +491,15 @@ document.querySelectorAll('.property-type').forEach(el => {
 
 // ===== Form submit =====
 function handleSubmit(e) {
-  e.preventDefault();
   const selected = document.querySelector('.property-type.active');
+
   if (!selected) {
+    e.preventDefault();
     alert('Prosím vyberte typ prostoru.');
-    return;
+    return false;
   }
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
-  e.target.reset();
-  document.querySelectorAll('.property-type').forEach(p => p.classList.remove('active'));
+
+  return true;
 }
 
 // ===== Gallery Filtering =====
