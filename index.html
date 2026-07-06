@@ -295,10 +295,11 @@
         <h2 class="section-title">Nezávazná poptávka</h2>
         <p class="section-subtitle">Vyplňte formulář a my se vám ozveme s nabídkou na míru. Obvykle odpovídáme do 24 hodin.</p>
 
-        <form action="https://formsubmit.co/podlahy.holcak@gmail.com" method="POST" class="inquiry-form" id="inquiryForm" onsubmit="handleSubmit(event)">
+        <form class="inquiry-form" id="inquiryForm" onsubmit="handleSubmit(event)">
         <input type="hidden" name="_subject" value="Nová nezávazná poptávka z webu">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://gratusapp.github.io/podlahy-holcak/">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Děkujeme za vaši poptávku! Ozveme se vám nejpozději do 24 hodin. — Podlahy Holčák, +420 731 522 405">
 
           <!-- Typ nemovitosti -->
           <label style="font-size: .85rem; font-weight: 500; margin-bottom: 12px; display: block;">Typ prostoru *</label>
@@ -462,7 +463,7 @@
 </footer>
 
 <!-- Toast -->
-<div class="toast" id="toast">✓ Poptávka byla úspěšně odeslána!</div>
+<div class="toast" id="toast"></div>
 
 <script>
 // ===== Navbar scroll effect =====
@@ -491,15 +492,51 @@ document.querySelectorAll('.property-type').forEach(el => {
 
 // ===== Form submit =====
 function handleSubmit(e) {
+  e.preventDefault();
+  
   const selected = document.querySelector('.property-type.active');
-
   if (!selected) {
-    e.preventDefault();
     alert('Prosím vyberte typ prostoru.');
     return false;
   }
 
-  return true;
+  const form = document.getElementById('inquiryForm');
+  const submitBtn = form.querySelector('.form-submit');
+  const formData = new FormData(form);
+  const toast = document.getElementById('toast');
+
+  // Disable button during submit
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Odesílám...';
+
+  fetch('https://formsubmit.co/ajax/podlahy.holcak@gmail.com', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      // Show success toast
+      toast.textContent = '✓ Poptávka byla úspěšně odeslána!';
+      toast.className = 'toast show success';
+      form.reset();
+      document.querySelectorAll('.property-type').forEach(p => p.classList.remove('active'));
+    } else {
+      toast.textContent = '✗ Něco se pokazilo. Zkuste to znovu.';
+      toast.className = 'toast show error';
+    }
+  })
+  .catch(error => {
+    toast.textContent = '✗ Chyba při odesílání. Zkontrolujte připojení.';
+    toast.className = 'toast show error';
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Odeslat poptávku →';
+    setTimeout(() => { toast.className = 'toast'; }, 5000);
+  });
+
+  return false;
 }
 
 // ===== Gallery Filtering =====
