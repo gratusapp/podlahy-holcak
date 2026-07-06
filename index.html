@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podlahy Holčák — Prémiové podlahářské služby</title>
+  <meta name="description" content="Profesionální pokládka a renovace podlah. Dřevěné, vinylové a laminátové podlahy na míru. Kvalitní řemeslná práce s precizností a péčí.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="images/logo.png" alt="Tomáš Holčák"></a>
+    <div class="nav-availability"><span class="dot"></span>Přijímáme nové zakázky</div>
+    <ul class="nav-links">
+      <li><a href="#o-nas">O nás</a></li>
+      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#galerie">Realizace</a></li>
+      <li><a href="#proces">Jak pracujeme</a></li>
+      <li><a href="#poptavka" class="nav-cta">Nezávazná poptávka</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">✕</button>
+  <a href="#o-nas" onclick="closeMobileMenu()">O nás</a>
+  <a href="#sluzby" onclick="closeMobileMenu()">Služby</a>
+  <a href="#galerie" onclick="closeMobileMenu()">Realizace</a>
+  <a href="#proces" onclick="closeMobileMenu()">Jak pracujeme</a>
+  <a href="#poptavka" onclick="closeMobileMenu()" class="nav-cta">Nezávazná poptávka</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+<h1>Podlahy, které<br>mluví za <span class="gold">kvalitu</span></h1>
+    <p>Profesionální pokládka a renovace podlah s důrazem na detail a precizní řemeslnou práci. Proměníme váš prostor v místo, kde se budete cítit jako doma.</p>
+    <div class="hero-buttons">
+      <a href="#poptavka" class="btn-primary">Chci nezávaznou nabídku</a>
+      <a href="#sluzby" class="btn-outline">Prohlédnout služby</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <h3>500+</h3>
+        <p>Spokojených zákazníků</p>
+      </div>
+      <div class="hero-stat">
+        <h3>15+</h3>
+        <p>Let zkušeností</p>
+      </div>
+      <div class="hero-stat">
+        <h3>100%</h3>
+        <p>Spokojenost zaručena</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O NÁS ===== -->
+<section class="section about" id="o-nas">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-up">
+        <img src="images/craftsmanship.png" alt="Řemeslná práce Podlahy Holčák">
+      </div>
+      <div class="fade-up">
+        <span class="section-label">O nás</span>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Řemeslná tradice s&nbsp;moderním přístupem</h2>
+        <p class="section-subtitle">Jsme rodinná firma s mnohaletou zkušeností v oboru podlahářství. Každou zakázku bereme osobně a dbáme na to, aby výsledek předčil vaše očekávání.</p>
+        <p style="color: var(--gray); margin-bottom: 32px; font-size: .95rem;">
+          Nabízíme kompletní servis od poradenství při výběru materiálu, přes přesné zaměření, až po finální pokládku a následný servis. Pracujeme s prémiovými materiály od renomovaných výrobců.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="icon">🎯</div>
+            <h4>Precizní práce</h4>
+            <p>Každý detail je pro nás důležitý</p>
+          </div>
+          <div class="about-feature">
+            <div class="icon">⏱️</div>
+            <h4>Dodržení termínů</h4>
+            <p>Spolehlivost je naše priorita</p>
+          </div>
+          <div class="about-feature">
+            <div class="icon">💎</div>
+            <h4>Kvalitní materiály</h4>
+            <p>Pouze ověření výrobci</p>
+          </div>
+          <div class="about-feature">
+            <div class="icon">🤝</div>
+            <h4>Osobní přístup</h4>
+            <p>Individuální řešení na míru</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLUŽBY ===== -->
+<section class="section" id="sluzby">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 60px;" class="fade-up">
+      <span class="section-label">Naše služby</span>
+      <div class="gold-line" style="margin: 0 auto 24px;"></div>
+      <h2 class="section-title">Co pro vás můžeme udělat</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Od výběru materiálu po finální leštění — postaráme se o vše.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up" onclick="goToGallery('drevo')" style="cursor: pointer;">
+        <div class="service-icon">🪵</div>
+        <h3>Dřevěné podlahy</h3>
+        <p>Pokládka masivních i vícevrstvých dřevěných podlah. Parkety, prkna, chevron i rybí kost — vše dle vašich představ.</p>
+      </div>
+      <div class="service-card fade-up" onclick="goToGallery('epoxid')" style="cursor: pointer;">
+        <div class="service-icon">🎨</div>
+        <h3>Epoxidové podlahy</h3>
+        <p>Moderní epoxidové a lité podlahy. Designové terrazzo, průmyslový vzhled i vysoká odolnost pro náročné prostory.</p>
+      </div>
+      <div class="service-card fade-up" onclick="goToGallery('vinyl')" style="cursor: pointer;">
+        <div class="service-icon">🏗️</div>
+        <h3>Vinylové podlahy</h3>
+        <p>Moderní vinylové podlahy odolné vodě i opotřebení. Ideální do kuchyní, koupelen i komerčních prostor.</p>
+      </div>
+      <div class="service-card fade-up" onclick="goToGallery('laminat')" style="cursor: pointer;">
+        <div class="service-icon">✨</div>
+        <h3>Laminátové podlahy</h3>
+        <p>Kvalitní laminátové podlahy s přirozeným vzhledem dřeva. Snadná údržba a výborný poměr cena/výkon.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🔧</div>
+        <h3>Renovace podlah</h3>
+        <p>Broušení, lakování a renovace starých dřevěných podlah. Vrátíme jim původní krásu a prodloužíme životnost.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📐</div>
+        <h3>Nivelace & příprava</h3>
+        <p>Příprava podkladu, nivelace a vyrovnání podlah. Základ pro dokonalý výsledek každé pokládky.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIE ===== -->
+<section class="section gallery" id="galerie">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 40px;" class="fade-up">
+      <span class="section-label">Naše realizace</span>
+      <div class="gold-line" style="margin: 0 auto 24px;"></div>
+      <h2 class="section-title">Ukázky naší práce</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Prozkoumejte naše dokončené projekty. Kliknutím na kategorii si zobrazíte daný typ podlah.</p>
+    </div>
+
+    <div class="gallery-filters fade-up">
+      <button class="filter-btn active" data-filter="all">Vše</button>
+      <button class="filter-btn" data-filter="drevo">Dřevěné podlahy</button>
+      <button class="filter-btn" data-filter="epoxid">Epoxidové podlahy</button>
+      <button class="filter-btn" data-filter="vinyl">Vinylové podlahy</button>
+      <button class="filter-btn" data-filter="laminat">Laminátové podlahy</button>
+      <button class="filter-btn" data-filter="video">Video ukázky</button>
+    </div>
+
+    <div class="gallery-grid fade-up" id="galleryGrid">
+      <!-- DŘEVO -->
+      <div class="gallery-item" data-category="drevo">
+        <img src="images/stairs.jpg" alt="Dřevěný obklad schodiště">
+        <div class="gallery-overlay"><span>Dřevěné podlahy — Obklad schodiště</span></div>
+      </div>
+      <div class="gallery-item" data-category="drevo">
+        <img src="images/stairs2.jpg" alt="Dřevěné schodiště detail">
+        <div class="gallery-overlay"><span>Dřevěné schodiště — Pohled z boku</span></div>
+      </div>
+      
+      <!-- EPOXID -->
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/wood.jpg" alt="Epoxidová podlaha s posypem">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Bílá s barevnými chipsy</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/wood2.jpg" alt="Epoxidová podlaha detail">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Koupelna s dekorem</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/wood3.jpg" alt="Epoxidová podlaha přechod">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Přechod k parketám</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/epoxy1.jpg" alt="Epoxidová podlaha terrazzo">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Terrazzo design</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/epoxy2.jpg" alt="Epoxidová litá podlaha">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Průmyslový design</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/epoxy3.jpg" alt="Epoxidová podlaha realizace">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Průběh realizace</span></div>
+      </div>
+      <div class="gallery-item" data-category="epoxid">
+        <img src="images/epoxy4.jpg" alt="Modrá epoxidová podlaha">
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Modrý design</span></div>
+      </div>
+      
+      <!-- VINYL -->
+      <div class="gallery-item" data-category="vinyl">
+        <img src="images/vinyl.jpg" alt="Vinylová podlaha v dřevostavbě">
+        <div class="gallery-overlay"><span>Vinylové podlahy — Dřevostavba</span></div>
+      </div>
+      <div class="gallery-item" data-category="vinyl">
+        <img src="images/vinyl2.jpg" alt="Vinylová podlaha detail">
+        <div class="gallery-overlay"><span>Vinylové podlahy — Detail</span></div>
+      </div>
+      
+      <!-- LAMINÁT -->
+      <div class="gallery-item" data-category="laminat">
+        <img src="images/laminate.jpg" alt="Laminátová podlaha světlý dub">
+        <div class="gallery-overlay"><span>Laminátové podlahy — Světlý dub</span></div>
+      </div>
+      <div class="gallery-item" data-category="laminat">
+        <img src="images/laminate2.jpg" alt="Laminátová podlaha ložnice">
+        <div class="gallery-overlay"><span>Laminátové podlahy — Ložnice</span></div>
+      </div>
+      <div class="gallery-item" data-category="laminat">
+        <img src="images/laminate3.jpg" alt="Laminátová podlaha detail">
+        <div class="gallery-overlay"><span>Laminátové podlahy — Pokoj</span></div>
+      </div>
+      
+      <!-- VIDEA -->
+      <div class="gallery-item" data-category="video">
+        <video src="images/video1.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <div class="gallery-overlay"><span>Betonové stěrky — Průběh realizace</span></div>
+      </div>
+      <div class="gallery-item" data-category="video">
+        <video src="images/video2.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <div class="gallery-overlay"><span>Betonové stěrky — Precizní vyhlazení</span></div>
+      </div>
+      <div class="gallery-item" data-category="video">
+        <video src="images/video3.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Práce s materiálem</span></div>
+      </div>
+      <div class="gallery-item" data-category="video">
+        <video src="images/video4.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <div class="gallery-overlay"><span>Epoxidové podlahy — Dokonalý výsledek</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCES ===== -->
+<section class="section" id="proces">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 60px;" class="fade-up">
+      <span class="section-label">Jak pracujeme</span>
+      <div class="gold-line" style="margin: 0 auto 24px;"></div>
+      <h2 class="section-title">Od poptávky k&nbsp;dokonalé podlaze</h2>
+    </div>
+    <div class="process-steps fade-up">
+      <div class="process-step">
+        <h4>Konzultace</h4>
+        <p>Probereme vaše představy, poradíme s výběrem materiálu a připravíme cenovou nabídku.</p>
+      </div>
+      <div class="process-step">
+        <h4>Zaměření</h4>
+        <p>Přijedeme k vám, přesně zaměříme prostor a navrhneme optimální řešení.</p>
+      </div>
+      <div class="process-step">
+        <h4>Realizace</h4>
+        <p>Profesionální pokládka s důrazem na každý detail. Čistě a v dohodnutém termínu.</p>
+      </div>
+      <div class="process-step">
+        <h4>Předání</h4>
+        <p>Finální kontrola kvality, úklid a předání díla. Poradíme s péčí o novou podlahu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POPTÁVKOVÝ FORMULÁŘ ===== -->
+<section class="section inquiry" id="poptavka">
+  <div class="container">
+    <div class="inquiry-wrapper">
+      <div class="fade-up">
+        <span class="section-label">Poptávka</span>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Nezávazná poptávka</h2>
+        <p class="section-subtitle">Vyplňte formulář a my se vám ozveme s nabídkou na míru. Obvykle odpovídáme do 24 hodin.</p>
+
+        <form action="https://formsubmit.co/podlahy.holcak@gmail.com" method="POST" class="inquiry-form" id="inquiryForm" onsubmit="handleSubmit(event)">
+<input type="hidden" name="_subject" value="Nová nezávazná poptávka z webu">
+<input type="hidden" name="_captcha" value="false">
+
+          <!-- Typ nemovitosti -->
+          <label style="font-size: .85rem; font-weight: 500; margin-bottom: 12px; display: block;">Typ prostoru *</label>
+          <div class="property-types" id="propertyTypes">
+            <label class="property-type" data-value="byt">
+              <input type="radio" name="propertyType" value="byt">
+              <span class="pt-icon">🏢</span>
+              <span class="pt-label">Byt</span>
+            </label>
+            <label class="property-type" data-value="dum">
+              <input type="radio" name="propertyType" value="dum">
+              <span class="pt-icon">🏠</span>
+              <span class="pt-label">Dům</span>
+            </label>
+            <label class="property-type" data-value="kancelare">
+              <input type="radio" name="propertyType" value="kancelare">
+              <span class="pt-icon">🏛️</span>
+              <span class="pt-label">Kanceláře</span>
+            </label>
+            <label class="property-type" data-value="obchod">
+              <input type="radio" name="propertyType" value="obchod">
+              <span class="pt-icon">🏪</span>
+              <span class="pt-label">Obchod</span>
+            </label>
+            <label class="property-type" data-value="restaurace">
+              <input type="radio" name="propertyType" value="restaurace">
+              <span class="pt-icon">🍽️</span>
+              <span class="pt-label">Restaurace</span>
+            </label>
+            <label class="property-type" data-value="jine">
+              <input type="radio" name="propertyType" value="jine">
+              <span class="pt-icon">📋</span>
+              <span class="pt-label">Jiné</span>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Jméno a příjmení *</label>
+              <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="area">Plocha (m²)</label>
+              <input type="number" id="area" name="area" placeholder="např. 45">
+            </div>
+            <div class="form-group">
+              <label for="floorType">Typ podlahy</label>
+              <select id="floorType" name="floorType">
+                <option value="">Vyberte typ...</option>
+                <option value="renovace">Epoxidová podlaha</option>
+                <option value="drevena">Dřevěná podlaha</option>
+                <option value="vinyl">Vinylová podlaha</option>
+                <option value="laminat">Laminátová podlaha</option>
+                <option value="renovace">Renovace stávající</option>
+                <option value="nevim">Potřebuji poradit</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="location">Místo realizace</label>
+            <input type="text" id="location" name="location" placeholder="Město / obec">
+          </div>
+          <div class="form-group">
+            <label for="message">Popis vaší představy</label>
+            <textarea id="message" name="message" placeholder="Popište prosím, co potřebujete — typ místnosti, stávající stav podlahy, vaše preference..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Odeslat poptávku →</button>
+        </form>
+      </div>
+
+      <div class="fade-up" style="position: sticky; top: 120px;">
+        <div class="inquiry-info">
+          <h3>Máte dotaz?<br>Zavolejte nám</h3>
+          <p>Rádi vám zodpovíme jakékoliv dotazy ohledně podlah a našich služeb. Nebojte se ozvat!</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Telefon</h4>
+            <p>+420 731 522 405</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>E-mail</h4>
+            <p>podlahy.holcak@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Oblast působení</h4>
+            <p>Celá Česká republika</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.instagram.com/podlahy.holcak/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 16px; width: 100%; color: inherit;">
+            <div class="contact-icon">📷</div>
+            <div>
+              <h4>Instagram</h4>
+              <p>@podlahy.holcak</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Tomáš Holčák">
+        <p>Profesionální podlahářské služby s důrazem na kvalitu, preciznost a spokojenost zákazníka.</p>
+      </div>
+      <div>
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#galerie">Realizace</a></li>
+          <li><a href="#poptavka">Poptávka</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Služby</h4>
+        <ul>
+          <li><a href="#sluzby">Epoxidové podlahy</a></li>
+          <li><a href="#sluzby">Dřevěné podlahy</a></li>
+          <li><a href="#sluzby">Vinylové podlahy</a></li>
+          <li><a href="#sluzby">Laminátové podlahy</a></li>
+          <li><a href="#sluzby">Renovace</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+420 731 522 495">+420 731 522 495</a></li>
+          <li><a href="mailto:podlahy.holcak@gmail.com">podlahy.holcak@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/podlahy.holcak/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Podlahy Holčák. Všechna práva vyhrazena.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">✓ Poptávka byla úspěšně odeslána!</div>
+
+<script>
+// ===== Navbar scroll effect =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ===== Mobile menu =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+// ===== Property type selector =====
+document.querySelectorAll('.property-type').forEach(el => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('.property-type').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    el.querySelector('input').checked = true;
+  });
+});
+
+// ===== Form submit =====
+function handleSubmit(e) {
+  e.preventDefault();
+  const selected = document.querySelector('.property-type.active');
+  if (!selected) {
+    alert('Prosím vyberte typ prostoru.');
+    return;
+  }
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 4000);
+  e.target.reset();
+  document.querySelectorAll('.property-type').forEach(p => p.classList.remove('active'));
+}
+
+// ===== Gallery Filtering =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+function filterGallery(category) {
+  // Update active button
+  filterBtns.forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+  });
+  
+  // Filter items
+  galleryItems.forEach(item => {
+    if (category === 'all' || item.getAttribute('data-category') === category) {
+      item.style.display = 'block';
+      setTimeout(() => item.style.opacity = '1', 50);
+    } else {
+      item.style.opacity = '0';
+      setTimeout(() => item.style.display = 'none', 300);
+    }
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterGallery(btn.getAttribute('data-filter'));
+  });
+});
+
+// Function to handle clicking on service cards
+window.goToGallery = function(category) {
+  const gallerySection = document.getElementById('galerie');
+  gallerySection.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => filterGallery(category), 500);
+};
+
+// ===== Scroll animations =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ===== Smooth scroll for all anchor links =====
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
