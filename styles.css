@@ -304,6 +304,54 @@ a:hover { color: var(--gold-light); }
 .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 600; }
 .service-card p { font-size: .9rem; color: var(--gray); line-height: 1.6; }
 
+/* ===== Premium Service (Stěrky) ===== */
+.premium-service {
+  background: var(--black);
+}
+.premium-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+.premium-features {
+  list-style: none;
+  margin-top: -12px;
+}
+.premium-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: rgba(245,240,232,0.9);
+}
+.premium-features .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(200,165,90,0.15);
+  color: var(--gold);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.premium-visual {
+  position: relative;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+.premium-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
 /* ===== Gallery ===== */
 .gallery { background: var(--black-light); }
 .gallery-filters {
@@ -557,13 +605,29 @@ a:hover { color: var(--gold-light); }
 /* ===== Toast ===== */
 .toast {
   position: fixed; bottom: 32px; right: 32px;
-  background: var(--black-card); border: 1px solid var(--gold);
+  background: var(--black-card);
   border-radius: var(--radius); padding: 18px 28px;
-  color: var(--gold); font-weight: 500; z-index: 2000;
+  font-weight: 500; z-index: 2000;
   transform: translateY(120px); opacity: 0;
-  transition: var(--transition);
+  transition: transform .4s cubic-bezier(.4,0,.2,1), opacity .4s ease;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
 }
 .toast.show { transform: translateY(0); opacity: 1; }
+.toast.success {
+  border: 1px solid #4caf50;
+  color: #81c784;
+}
+.toast.error {
+  border: 1px solid #e53935;
+  color: #ef9a9a;
+}
+.form-submit:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
 
 
 /* ===== Úpravy dle zadání ===== */
