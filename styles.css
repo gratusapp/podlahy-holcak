@@ -953,3 +953,93 @@ body {
     padding: 16px 24px !important;
   }
 }
+
+/* ===== GDPR & Legal Styles ===== */
+.form-gdpr {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.form-gdpr input[type="checkbox"] {
+  width: auto;
+  margin-top: 5px;
+  cursor: pointer;
+  accent-color: var(--gold);
+}
+.form-gdpr label {
+  display: inline;
+  font-size: .88rem;
+  color: var(--gray);
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0;
+}
+.form-gdpr label a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.form-gdpr label a:hover {
+  color: var(--gold-light);
+}
+
+/* Footer GDPR Link & Layout */
+.footer-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-gdpr-link {
+  color: var(--gray);
+  text-decoration: none;
+}
+.footer-gdpr-link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .footer-bottom-flex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+/* Legal page layout */
+.legal-container {
+  max-width: 800px;
+  margin: 140px auto 100px;
+  padding: 0 24px;
+}
+.legal-container h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--black-border);
+  padding-bottom: 16px;
+}
+.legal-container h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.legal-container p, .legal-container ul {
+  color: var(--white);
+  opacity: 0.9;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+.legal-container ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+.legal-container ul li {
+  margin-bottom: 8px;
+}

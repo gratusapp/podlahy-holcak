@@ -481,6 +481,10 @@
             <label for="message">Popis vaší představy</label>
             <textarea id="message" name="message" placeholder="Popište prosím, co potřebujete — typ místnosti, stávající stav podlahy, vaše preference..."></textarea>
           </div>
+          <div class="form-gdpr">
+            <input type="checkbox" id="gdpr" name="gdpr" required>
+            <label for="gdpr">Souhlasím se <a href="gdpr.html" target="_blank">zpracováním osobních údajů</a> *</label>
+          </div>
           <button type="submit" class="form-submit">Odeslat poptávku →</button>
         </form>
       </div>
@@ -562,7 +566,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Podlahy Holčák. Všechna práva vyhrazena.</p>
+      <div class="footer-bottom-flex">
+        <p>© 2026 Podlahy Holčák. Všechna práva vyhrazena.</p>
+        <p><a href="gdpr.html" class="footer-gdpr-link">Ochrana osobních údajů (GDPR)</a></p>
+      </div>
     </div>
   </div>
 </footer>
